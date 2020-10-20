@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Carousel from './components/Carousel';
 
 function App() {
+  const listData = [
+    "/images/download.jpeg",
+    "/images/download (1).jpeg",
+    "/images/download (2).jpeg",
+    "/images/download (3).jpeg",
+    "/images/download (4).jpeg",
+    "/images/download (5).jpeg",
+    "/images/download (6).jpeg",
+    "/images/download (7).jpeg",
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Carousel
+        width={500}
+        height={300}
+        gap={40}
+        listCarousel = {listData}
+      />
     </div>
   );
 }
